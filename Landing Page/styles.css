@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    color: azure;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Align items vertically */
+    border: 1px solid black;
+    margin: 10px;
+    background-image: url('https://www.parsons.com/wp-content/uploads/2020/08/Technical-Webinar-Image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px; /* Set a height for the header */
+}
+
+.header-container {
+    position: relative;
+}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.header-buttons button {
+    margin: 5px;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.header-buttons button:hover {
+    background-color: #45a049;
+}
+
+img {
+    margin: 10px;
+  width: 350px;
+  height: 350px;
+  padding: 10px;
+  border: 1px solid transparent;
+}
+
+/* ... existing styles ... */
+
+
+
+/* ... existing styles ... */
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.flip-container {
+    width: 30%; /* Adjust the width as needed */
+    margin: 10px;
+    perspective: 1000px;
+}
+
+.flipper {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.back p {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.footer-container {
+    max-width: auto;
+    margin: 0 auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+    text-align: center;
+    color:azure;
+}
+
+p {
+    color:deeppink;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.footer-container {
+    max-width: auto;
+    margin: 0 auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}

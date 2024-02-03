@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      background: url('https://img.freepik.com/premium-vector/pi-day-seamless-pattern-with-mathematical-constants-baked-pie-template-hand-drawn-illustration_2175-12164.jpg');
+      font-family: Arial, sans-serif;
+    }
+
+    #header {
+      font-size: 50px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: maroon;
+      font-style: italic;
+    }
+
+    #calculator {
+      background: rgb(51, 102, 255);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    #display-container {
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    #display {
+      font-size: 24px;
+      margin-bottom: 10px;
+      padding: 10px;
+      width: 100%;
+      text-align: right;
+    }
+
+    .btn {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    #exit-btn {
+      background-color: #ff3333; /* Red color for exit button */
+      color: white;
+      position: absolute;
+      bottom: 10px;
+      height: 40px;
+      width: 80px;
+      left: 50%; /* Center the button horizontally */
+      transform: translateX(-50%);
+    }
+
+  </style>
+</head>
+<body>
+  <div id="header">CALCULATOR</div>
+  <div id="calculator">
+    <div id="display-container">
+        <div id="display">0</div>
+    </div>
+    <button class="btn" onclick="appendToDisplay('1')">1</button>
+    <button class="btn" onclick="appendToDisplay('2')">2</button>
+    <button class="btn" onclick="appendToDisplay('3')">3</button>
+    <button class="btn" onclick="appendToDisplay('+')">+</button>
+    <br>
+    <button class="btn" onclick="appendToDisplay('4')">4</button>
+    <button class="btn" onclick="appendToDisplay('5')">5</button>
+    <button class="btn" onclick="appendToDisplay('6')">6</button>
+    <button class="btn" onclick="appendToDisplay('-')">-</button>
+    <br>
+    <button class="btn" onclick="appendToDisplay('7')">7</button>
+    <button class="btn" onclick="appendToDisplay('8')">8</button>
+    <button class="btn" onclick="appendToDisplay('9')">9</button>
+    <button class="btn" onclick="appendToDisplay('*')">*</button>
+    <br>
+    <button class="btn" onclick="appendToDisplay('0')">0</button>
+    <button class="btn" onclick="clearDisplay()">C</button>
+    <button class="btn" onclick="deleteLastCharacter()">DEL</button>
+    <button class="btn" onclick="appendToDisplay('/')">/</button>
+    <button class="btn" onclick="calculateResult()">=</button>
+  </div>
+
+  <button id="exit-btn" class="btn" onclick="exitCalculator()">Exit</button>
+
+  <script>
+    let display = document.getElementById('display');
+
+    function appendToDisplay(value) {
+      if (display.textContent === '0' && !isNaN(value)) {
+        display.textContent = value;
+      } else {
+        display.textContent += value;
+      }
+    }
+
+    function clearDisplay() {
+      display.textContent = '0';
+    }
+
+    function deleteLastCharacter() {
+      display.textContent = display.textContent.slice(0, -1);
+      if (display.textContent === '') {
+        display.textContent = '0';
+      }
+    }
+
+    function calculateResult() {
+      try {
+        display.textContent = eval(display.textContent);
+      } catch (error) {
+        display.textContent = 'Error';
+      }
+    }
+
+    function exitCalculator() {
+      const confirmation = window.confirm("Thank you for using the calculator. See you later!");
+      if (confirmation) {
+        window.close();
+      }
+    }
+
+  </script>
+</body>
+</html>
