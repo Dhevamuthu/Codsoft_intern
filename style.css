@@ -6,7 +6,7 @@
 /* hero background image */
 .bgimage {
     height:100vh;
-    background: url('images/heroImage.jpeg');
+    background: url('images/bg.jpg');
     background-size:cover;
     position:relative;
 }
@@ -33,31 +33,49 @@
 } */
 #contact {
     padding-bottom: 4rem;
+    font-style: italic;
+    background-color: skyblue;
+
 }
 /* about section image css */
 .imageAboutPage {
     width: 100%;
 }
+/* Add this CSS to your existing styles or create a new styles.css file */
+.skills{
+    background-color: bisque;
+}
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-/* services section css */
-.servicesText.card {
-    height: 280px;
-    cursor: pointer;
-  }
-.servicesIcon {
-    font-size: 36px;
+.skill-item {
     text-align: center;
-    width: 100%;
+    margin: 15px;
 }
-.card-title {
-    text-align: center;
+
+.skill-item img {
+    width: 80px; /* Adjust the image width as needed */
 }
-.card:hover .servicesIcon {
-    color: #008000;
+
+.skill-item p {
+    font-weight: bold;
+    font-size: 1.2rem; /* Adjust the font size as needed */
 }
-.servicesText:hover {
-    border: 1px solid #008000;
+
+
+.projects {
+    background-color: black;
+    color: white;
 }
+
+.project-item h3 {
+    color: white; /* Style the heading text color */
+}
+
 
 /* social media icons styling */
 .social-icons {
