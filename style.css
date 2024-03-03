@@ -44,6 +44,7 @@
 /* Add this CSS to your existing styles or create a new styles.css file */
 .skills{
     background-color: bisque;
+    width: 100%;
 }
 .skills-container {
     display: flex;
@@ -65,7 +66,16 @@
     font-weight: bold;
     font-size: 1.2rem; /* Adjust the font size as needed */
 }
+.profiles-container {
+    display: flex;
+    gap: 100px;
+}
 
+.profiles-container img {
+    width: 100px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
 
 .projects {
     background-color: black;
